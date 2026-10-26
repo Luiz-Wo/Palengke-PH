@@ -615,3 +615,35 @@ h1, h2, h3, p { margin-top: 0; }
 .favorite-remove-button { border:1px solid var(--line); background:#fff; color:#9b6d62; width:30px; height:30px; border-radius:9px; font-size:18px; }
 .favorites-empty { padding:28px 10px; text-align:center; color:var(--muted); font-size:13px; line-height:1.6; }
 @media(max-width:520px) { .product-buy-controls { gap:5px; } .product-quantity-label { gap:3px; } .product-quantity-label span { display:none; } .product-quantity-label input { width:45px; height:32px; } .favorite-toggle { top:8px; right:8px; width:32px; height:32px; } .favorites-modal { padding:18px 14px; border-radius:18px; } .favorite-item { gap:8px; padding:8px; } .favorite-item-photo { width:50px; height:50px; flex-basis:50px; } .favorite-add-button { padding:8px; } }
+
+
+/* Mobile repair: prevent the decorative market symbol from covering the banner */
+@media (max-width: 650px) {
+  .market-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 14px;
+    min-height: 0;
+    padding: 26px 22px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .market-banner .banner-decoration { display: none !important; }
+  .market-banner .banner-icon { width: 44px; height: 44px; flex: 0 0 44px; font-size: 24px; border-radius: 13px; }
+  .market-banner > div:not(.banner-icon) { position: relative; z-index: 1; width: 100%; min-width: 0; }
+  .market-banner h2 { max-width: 100%; font-size: clamp(21px, 6vw, 27px); line-height: 1.2; overflow-wrap: anywhere; }
+  .market-banner p { max-width: 100%; font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
+  .market-banner .button { position: relative; z-index: 2; width: auto; max-width: 100%; min-height: 44px; white-space: normal; }
+  .how-it-works { padding-top: 22px; gap: 20px; }
+  .site-footer { align-items: flex-start; gap: 12px; }
+  .site-footer > span { max-width: 100%; line-height: 1.6; }
+}
+@media (max-width: 380px) {
+  .market-banner { padding: 22px 17px; }
+  .market-banner h2 { font-size: 21px; }
+  .market-banner .button { font-size: 12px; padding: 12px 15px; }
+}
