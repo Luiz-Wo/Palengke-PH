@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#1f6b45" />
+  <meta name="theme-color" content="#243b2e" />
   <title>Palengke PH — Fresh finds, fair prices</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
   </div>
 
   <header class="site-header">
-    <nav class="quick-nav" aria-label="Quick links"><a href="#products">Mamili</a><a href="#how-it-works">Paano gumagana</a></nav>
+    <nav class="quick-nav" aria-label="Quick links"><a href="#products">Mamili</a><a href="#market-finds">Market Finds</a><a href="#how-it-works">Paano gumagana</a></nav>
     <a class="brand" href="#" aria-label="Palengke PH home">
       <span class="brand-mark" aria-hidden="true">p<span>+</span></span>
       <span class="brand-copy"><strong>palengke<span>ph</span></strong><small>fresh finds, fair prices</small></span>
@@ -100,6 +100,31 @@
       </div>
     </section>
 
+    <section class="market-finds container" id="market-finds" aria-labelledby="marketFindsTitle">
+      <div class="market-finds-intro">
+        <div class="market-finds-copy">
+          <span class="section-kicker">PANG-ARAW-ARAW NA SULIT</span>
+          <h2 id="marketFindsTitle">Market finds, <em>mas madali.</em></h2>
+          <p>Mga bundle at shortcut para mas mabilis ang pamamalengke.</p>
+        </div>
+        <button class="market-finds-toggle" id="marketFindsToggle" type="button" aria-expanded="false" aria-controls="marketFindsPanel">
+          <span class="market-toggle-icon" aria-hidden="true">✳</span><span class="market-toggle-label">Explore Market Finds</span><span class="market-toggle-arrow" aria-hidden="true">↓</span>
+        </button>
+      </div>
+      <div class="market-finds-panel" id="marketFindsPanel" hidden>
+        <div class="market-finds-toolbar">
+          <div><span class="market-panel-kicker">READY-MADE IDEAS</span><h3>What are we cooking today?</h3></div>
+          <div class="market-quick-actions"><button type="button" class="market-utility-button" id="showFavoritesBtn">♡ <span>Favorites</span> <b id="favoritesCount">0</b></button><button type="button" class="market-utility-button" id="showOrdersBtn">↻ <span>My demo orders</span></button></div>
+        </div>
+        <div class="market-bundle-track" aria-label="Market bundles">
+          <article class="market-bundle-card bundle-sinigang"><div class="bundle-emoji" aria-hidden="true">🍲</div><div class="bundle-copy"><span>READY-TO-COOK</span><h4>Pang-sinigang set</h4><p>Kamatis, talong at pechay</p></div><button type="button" class="bundle-add" data-bundle="sinigang">Add set <span>+</span></button></article>
+          <article class="market-bundle-card bundle-fruit"><div class="bundle-emoji" aria-hidden="true">🥭</div><div class="bundle-copy"><span>MERIENDA PICKS</span><h4>Fruit basket</h4><p>Saging, mangga at pinya</p></div><button type="button" class="bundle-add" data-bundle="fruit">Add set <span>+</span></button></article>
+          <article class="market-bundle-card bundle-pantry"><div class="bundle-emoji" aria-hidden="true">🍚</div><div class="bundle-copy"><span>KITCHEN ESSENTIALS</span><h4>Pantry starter</h4><p>Bigas at itlog</p></div><button type="button" class="bundle-add" data-bundle="pantry">Add set <span>+</span></button></article>
+        </div>
+        <p class="market-finds-note">Demo bundles lang muna. Regular item prices ang gagamitin; walang pekeng discount o live-stock claim.</p>
+      </div>
+    </section>
+
     <section class="how-it-works container" id="how-it-works" aria-label="How Palengke PH works">
       <div><span class="step-number">01</span><h3>Piliin ang bilihin</h3><p>Hanapin ang kailangan at piliin ang tamang timbang.</p></div>
       <div><span class="step-number">02</span><h3>I-check ang basket</h3><p>Makikita agad ang subtotal at delivery fee.</p></div>
@@ -121,6 +146,11 @@
   </footer>
 
   <div class="overlay" id="overlay" hidden></div>
+  <section class="favorites-modal" id="favoritesModal" role="dialog" aria-modal="true" aria-labelledby="favoritesTitle" hidden>
+    <div class="favorites-modal-header"><div><span class="section-kicker">SAVED FOR LATER</span><h2 id="favoritesTitle">My favorites <span>♡</span></h2><p>Mga produktong gusto mong balikan.</p></div><button type="button" class="icon-button" id="closeFavoritesBtn" aria-label="Close favorites">×</button></div>
+    <p id="favoritesEmpty" class="favorites-empty" hidden>Wala ka pang favorites. Pindutin ang ♡ sa product card para i-save ang paborito mo.</p>
+    <div id="favoritesList" class="favorites-list"></div>
+  </section>
   <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true">
     <div class="drawer-header">
       <div><span class="section-kicker">YOUR BASKET</span><h2 id="cartTitle">My cart <span id="drawerCartCount">(0)</span></h2></div>
