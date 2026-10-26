@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1f6b45" />
+  <title>Palengke PH — Fresh finds, fair prices</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-strip">
+    <p><strong>PALENGKE PH</strong><span>•</span> Presyong pang-araw-araw, mula sa lokal na tindero</p>
+  </div>
+
+  <header class="site-header">
+    <nav class="quick-nav" aria-label="Quick links"><a href="#products">Mamili</a><a href="#how-it-works">Paano gumagana</a></nav>
+    <a class="brand" href="#" aria-label="Palengke PH home">
+      <span class="brand-mark" aria-hidden="true">p<span>+</span></span>
+      <span class="brand-copy"><strong>palengke<span>ph</span></strong><small>fresh finds, fair prices</small></span>
+    </a>
+
+    <form class="search-form" id="searchForm" role="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+      <input id="searchInput" type="search" placeholder="Search gulay, prutas, isda..." autocomplete="off" aria-label="Search products" />
+      <button type="submit">Search</button>
+    </form>
+
+    <button class="cart-button" id="openCartBtn" type="button" aria-label="Open shopping cart">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"></path><circle cx="10" cy="20" r="1.2"></circle><circle cx="18" cy="20" r="1.2"></circle></svg>
+      <span class="cart-button-label">My Cart</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero hero-carousel container" aria-label="Palengke PH highlights">
+      <div class="hero-slides" id="heroSlides">
+        <article class="hero-slide active" data-slide="0" style="--slide-image:url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1500&q=88')">
+          <div class="hero-content">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> FROM LOCAL FARMS TO YOUR TABLE</span>
+            <h1>Preskong bilihin.<br><em>Presyong panalo.</em></h1>
+            <p>Gulay at prutas na makulay, sariwa, at swak sa budget. Mamili ng paborito mong pang-ulam at pang-merienda.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#products">Mamili ng sariwa <span aria-hidden="true">↗</span></a><span class="hero-note"><span class="tiny-check">✓</span> Local finds, everyday</span></div>
+            <div class="hero-stats"><div><strong>Fresh</strong><span>everyday picks</span></div><div><strong>Fair</strong><span>market prices</span></div><div><strong>Local</strong><span>community first</span></div></div>
+          </div>
+          <div class="hero-photo"><span class="photo-badge">🌿 Preskong picks</span><span class="photo-caption">Galing sa bukid, para sa pamilya.</span></div>
+        </article>
+        <article class="hero-slide" data-slide="1" style="--slide-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=88')">
+          <div class="hero-content"><span class="eyebrow"><span class="eyebrow-dot"></span> SUPPORTING FILIPINO GROWERS</span><h1>Diretso sa bukid.<br><em>Alagang lokal.</em></h1><p>Tuklasin ang sariwang ani at suportahan ang mga magsasakang Pilipino.</p><div class="hero-actions"><a class="button button-primary" href="#products">Kilalanin ang ani <span aria-hidden="true">↗</span></a><span class="hero-note"><span class="tiny-check">✓</span> Kilala ang pinagmulan</span></div><div class="hero-stats"><div><strong>Farm</strong><span>fresh produce</span></div><div><strong>Local</strong><span>Filipino growers</span></div><div><strong>Fair</strong><span>clear pricing</span></div></div></div>
+          <div class="hero-photo"><span class="photo-badge">🇵🇭 Suportahan ang lokal</span><span class="photo-caption">Mas masarap kapag alam ang pinanggalingan.</span></div>
+        </article>
+        <article class="hero-slide" data-slide="2" style="--slide-image:url('https://images.unsplash.com/photo-1543168256-418811576931?auto=format&fit=crop&w=1500&q=88')">
+          <div class="hero-content"><span class="eyebrow"><span class="eyebrow-dot"></span> YOUR MARKET, YOUR SCHEDULE</span><h1>Ikaw ang oras.<br><em>Ikaw ang pili.</em></h1><p>Planuhin ang pamamalengke mo: piliin ang mga bilihin, pumili ng pickup schedule, at iwas-hassle sa pagkuha ng order.</p><div class="hero-actions"><a class="button button-primary" href="#products">Buuin ang basket <span aria-hidden="true">↗</span></a><span class="hero-note"><span class="tiny-check">✓</span> Convenient at simple</span></div><div class="hero-stats"><div><strong>Choose</strong><span>your essentials</span></div><div><strong>Schedule</strong><span>your pickup</span></div><div><strong>Enjoy</strong><span>more time</span></div></div></div>
+          <div class="hero-photo"><span class="photo-badge">🧺 Ready when you are</span><span class="photo-caption">Mas convenient na pamamalengke.</span></div>
+        </article>
+      </div>
+      <div class="carousel-controls"><div class="carousel-navigation"><div class="carousel-dots" id="heroDots" aria-label="Choose hero slide"><button type="button" class="carousel-dot active" data-go-slide="0" aria-label="Slide 1" aria-pressed="true"></button><button type="button" class="carousel-dot" data-go-slide="1" aria-label="Slide 2" aria-pressed="false"></button><button type="button" class="carousel-dot" data-go-slide="2" aria-label="Slide 3" aria-pressed="false"></button></div><div class="carousel-arrows"><button type="button" id="heroPrev" aria-label="Previous slide">←</button><button type="button" id="heroNext" aria-label="Next slide">→</button></div></div><span class="carousel-progress"><span id="carouselProgress"></span></span></div>
+    </section>
+    <section class="trust-row container" aria-label="Store benefits">
+      <div><span class="trust-icon">✳</span><span><strong>Fresh selections</strong><small>Everyday essentials</small></span></div>
+      <div><span class="trust-icon">₱</span><span><strong>Presyong palengke</strong><small>Clear prices, no guesswork</small></span></div>
+      <div><span class="trust-icon">♡</span><span><strong>Support local</strong><small>Made for the community</small></span></div>
+    </section>
+
+    <section class="shop-section container" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">WHAT'S IN SEASON</span>
+          <h2>Hanap mo, <em>nandito.</em></h2>
+          <p>Daily essentials and palengke favorites, all in one place.</p>
+        </div>
+        <div class="shop-tools"><label for="sortSelect">Ayusin ayon sa
+          <select id="sortSelect"><option value="featured">Recommended</option><option value="price-low">Presyong mababa</option><option value="price-high">Presyong mataas</option><option value="name">Pangalan A–Z</option></select>
+        </label><span class="product-count" id="productCount">12 products</span></div>
+      </div>
+
+      <div class="category-list" id="categoryList" aria-label="Filter by category">
+        <button class="category-chip active" data-category="All" type="button">All products <span>✳</span></button>
+        <button class="category-chip" data-category="Vegetables" type="button">🥬 Gulay</button>
+        <button class="category-chip" data-category="Fruits" type="button">🍌 Prutas</button>
+        <button class="category-chip" data-category="Meat & Seafood" type="button">🐟 Karne & Isda</button>
+        <button class="category-chip" data-category="Pantry" type="button">🍚 Pantry</button>
+      </div>
+
+      <div class="active-filters" id="activeFilters" hidden>
+        <span id="filterSummary"></span>
+        <button id="clearFiltersBtn" type="button">Clear filters ×</button>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <span>🧺</span>
+        <h3>Walang nahanap, bro.</h3>
+        <p>Try another keyword or choose a different category.</p>
+        <button class="button button-primary" id="resetShopBtn" type="button">Show all products</button>
+      </div>
+    </section>
+
+    <section class="how-it-works container" id="how-it-works" aria-label="How Palengke PH works">
+      <div><span class="step-number">01</span><h3>Piliin ang bilihin</h3><p>Hanapin ang kailangan at piliin ang tamang timbang.</p></div>
+      <div><span class="step-number">02</span><h3>I-check ang basket</h3><p>Makikita agad ang subtotal at delivery fee.</p></div>
+      <div><span class="step-number">03</span><h3>Ihanda ang order</h3><p>Sa demo na ito, sample checkout pa lang ang gumagana.</p></div>
+    </section>
+
+    <section class="market-banner container">
+      <div class="banner-icon">🧺</div>
+      <div><span class="section-kicker">YOUR EVERYDAY MARKET</span><h2>Good food. Good finds. <em>Good neighbors.</em></h2><p>Bringing the familiar palengke experience to your screen.</p></div>
+      <a class="button button-light" href="#products">Explore products <span aria-hidden="true">↗</span></a>
+      <span class="banner-decoration">✳</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">p<span>+</span></span><span class="brand-copy"><strong>palengke<span>ph</span></strong><small>fresh finds, fair prices</small></span></a>
+    <p>Para sa araw-araw na lutong-bahay at pamalengke.</p>
+    <span>© <span id="currentYear"></span> Palengke PH · Demo project</span>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="drawer-header">
+      <div><span class="section-kicker">YOUR BASKET</span><h2 id="cartTitle">My cart <span id="drawerCartCount">(0)</span></h2></div>
+      <button class="icon-button" id="closeCartBtn" type="button" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>🧺</span><h3>Your basket is waiting</h3><p>Add some fresh finds to get started.</p><button class="button button-primary" id="continueShoppingBtn" type="button">Continue shopping</button></div>
+    <div class="cart-summary" id="cartSummary">
+      <div class="summary-line"><span>Subtotal</span><strong id="cartSubtotal">₱0.00</strong></div>
+      <div class="summary-line"><span>Delivery fee</span><strong id="cartDelivery">₱49.00</strong></div>
+      <div class="summary-line summary-total"><span>Estimated total</span><strong id="cartTotal">₱49.00</strong></div>
+      <p class="demo-note">Demo checkout only. No real payment is collected.</p>
+      <button class="button button-primary checkout-button" id="checkoutBtn" type="button">Proceed to checkout <span>→</span></button>
+    </div>
+  </aside>
+
+  <section class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" hidden>
+    <div class="modal-header"><div><span class="section-kicker">ALMOST THERE</span><h2 id="checkoutTitle">Checkout details</h2><p>Ilagay ang contact details para sa sample order.</p></div><button class="icon-button" id="closeCheckoutBtn" type="button" aria-label="Close checkout">×</button></div>
+    <form id="checkoutForm">
+      <fieldset class="fulfilment-field">
+        <legend>Paano mo gustong matanggap ang order?</legend>
+        <div class="fulfilment-options">
+          <label class="fulfilment-option selected" id="deliveryOption"><input type="radio" name="fulfilment" value="delivery" checked><span class="fulfilment-icon">🛵</span><span><strong>Delivery</strong><small>₱49 delivery fee</small></span></label>
+          <label class="fulfilment-option" id="pickupOption"><input type="radio" name="fulfilment" value="pickup"><span class="fulfilment-icon">🧺</span><span><strong>Pickup</strong><small>Walang delivery fee</small></span></label>
+        </div>
+        <div class="pickup-note" id="pickupNote" hidden><strong>📍 Pickup schedule</strong><p>Pumili ng araw at oras na gusto mong kunin ang order. Demo schedule ito at kailangan pang ikonekta sa aktuwal na tindahan.</p><div class="pickup-schedule"><label>Araw ng pickup<input type="date" name="pickupDate" id="pickupDate"></label><label>Oras ng pickup<select name="pickupTime" id="pickupTime"><option value="">Pumili ng oras</option><option>8:00 AM – 9:00 AM</option><option>9:00 AM – 10:00 AM</option><option>10:00 AM – 11:00 AM</option><option>11:00 AM – 12:00 PM</option><option>1:00 PM – 2:00 PM</option><option>2:00 PM – 3:00 PM</option><option>3:00 PM – 4:00 PM</option><option>4:00 PM – 5:00 PM</option></select></label></div></div>
+      </fieldset>
+      <div class="form-grid">
+        <label>Buong pangalan<input name="fullName" required minlength="2" placeholder="Juan Dela Cruz" autocomplete="name"></label>
+        <label>Mobile number<input name="phone" type="tel" required pattern="[0-9+() -]{7,20}" placeholder="09XX XXX XXXX" autocomplete="tel"></label>
+        <label class="full-field" id="addressField">Delivery address<textarea name="address" required minlength="8" rows="3" placeholder="House no., street, barangay, city" autocomplete="street-address"></textarea></label>
+        <label class="full-field">Order notes <span class="optional">(optional)</span><textarea name="notes" rows="2" placeholder="Any special instructions?"></textarea></label>
+      </div>
+      <div class="checkout-total"><span>Estimated total</span><strong id="checkoutTotal">₱0.00</strong></div>
+      <p class="demo-note">Demo checkout pa ito. Hindi pa ipinapadala ang order sa tindero at walang aktuwal na bayad na kokolektahin.</p>
+      <button class="button button-primary checkout-button" type="submit">I-submit ang demo order <span>→</span></button>
+    </form>
+  </section>
+
+
+  <section class="product-detail-modal" id="productDetailModal" role="dialog" aria-modal="true" aria-labelledby="detailProductName" hidden>
+    <button type="button" class="product-detail-close icon-button" id="closeProductBtn" aria-label="Close product details">×</button>
+    <div class="detail-gallery"><img id="detailProductImage" alt="" src="" hidden><div class="detail-product-emoji" id="detailProductEmoji">🥬</div><div class="detail-gallery-controls"><button id="detailGalleryPrev" type="button" aria-label="Previous product image" disabled>←</button><span id="detailGalleryCount">01 / 01</span><button id="detailGalleryNext" type="button" aria-label="Next product image" disabled>→</button></div></div>
+    <div class="detail-product-copy"><span class="section-kicker" id="detailProductCategory">VEGETABLES</span><h2 id="detailProductName">Product name</h2><p id="detailProductDescription"></p><strong class="detail-product-price" id="detailProductPrice"></strong><button class="detail-origin-link" type="button" id="detailOriginButton">📍 <span id="detailProductOrigin">Pinagmulan</span></button><button type="button" class="button button-primary detail-add-button" id="detailAddButton">Idagdag sa basket ＋</button><small>Tip: pindutin ang buong product card para makita ang detalye.</small></div>
+  </section>
+  <section class="origin-modal" id="originModal" role="dialog" aria-modal="true" aria-labelledby="originTitle" hidden><button type="button" class="origin-close icon-button" id="closeOriginBtn" aria-label="Close product origin">×</button><span class="section-kicker">FROM THE PHILIPPINES</span><div class="origin-emoji" id="originEmoji">🥬</div><h2 id="originTitle">Product origin</h2><p id="originDescription"></p><div class="origin-facts"><span>🇵🇭 <strong>Local sourcing</strong></span><span>🧑‍🌾 <strong>Support Filipino growers</strong></span></div><small class="origin-disclaimer">Demo information: origin details are examples and must be verified with your actual supplier before launch.</small></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
